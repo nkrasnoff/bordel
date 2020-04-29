@@ -217,10 +217,5 @@ config_main() {
         fi
     done
     config_generate_auto "${branch}" "${forced}" "${rmwork}"
-
-    pushd "${TOP}" >/dev/null
-    repo start "${branch}" openxt/*
-    popd >/dev/null
-
     config_generate_env_file
 }
